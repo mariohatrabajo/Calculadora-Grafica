@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<TabPane prefHeight="400.0" prefWidth="230.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+  <tabs>
+    <Tab text="Fórmula">
+      <content>
+            <ScrollPane>
+               <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="176.0" fitWidth="236.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imagenes/comousar1.PNG" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="14.0" layoutY="168.0" text="Aquí puedes introducir la función que" />
+                        <Label layoutX="14.0" layoutY="186.0" text="deseas ver representada." />
+                        <Label layoutX="14.0" layoutY="216.0" text="Si le das a Borrar se borrarán todas las" />
+                        <Label layoutX="14.0" layoutY="233.0" text="líneas." />
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="500.0">
+                           <image>
+                              <Image url="@../imagenes/comousar2.PNG" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+      </content>
+    </Tab>
+    <Tab text="Tabla de valores">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="151.0" fitWidth="230.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagenes/comousarTV0.PNG" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="14.0" layoutY="151.0" text="Puedes cargar, guardar y borrar tablas" />
+                  <Label layoutX="14.0" layoutY="168.0" text="de valores. Sirven para guardar ciertos" />
+                  <Label layoutX="14.0" layoutY="185.0" text="valores de una fórmula." />
+                  <ImageView fitHeight="170.0" fitWidth="157.0" layoutX="1.0" layoutY="202.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagenes/comousarTV1.PNG" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="113.0" layoutY="245.0" text="Aqui puedes añadir," />
+                  <Label layoutX="113.0" layoutY="262.0" text="quitar y ver los " />
+                  <Label layoutX="115.0" layoutY="279.0" text="valores de la tabla " />
+                  <Label layoutX="115.0" layoutY="296.0" text="seleccionada." />
+               </children>
+            </AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Interfaz">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="144.0" fitWidth="230.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagenes/comousar3.PNG" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="14.0" layoutY="143.0" text="Abajo a la izquierda te muestra la x del" />
+                  <Label layoutX="14.0" layoutY="160.0" text="ratón, junto con la y correspondiente" />
+                  <Label layoutX="14.0" layoutY="177.0" text="según la fórmula que estés representan-" />
+                  <Label layoutX="14.0" layoutY="194.0" text="do." />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+  </tabs>
+</TabPane>

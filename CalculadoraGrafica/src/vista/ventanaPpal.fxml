@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.controladorPpal">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="Datos">
+          <items>
+                  <Menu mnemonicParsing="false" text="Cargar fórmula">
+                    <items>
+                        <Menu fx:id="menuFormulasPred" mnemonicParsing="false" text="Fórmulas predeterminadas" />
+                        <Menu fx:id="menuFormulasGuard" mnemonicParsing="false" text="Fórmulas guardadas" />
+                    </items>
+                  </Menu>
+            <MenuItem fx:id="miGuardF" mnemonicParsing="false" onAction="#guardarFormula" text="Guardar fórmula" />
+                  <MenuItem fx:id="miModF" mnemonicParsing="false" onAction="#modificarFormula" text="Modificar fórmula" />
+                  <MenuItem fx:id="miBorrarF" mnemonicParsing="false" onAction="#borrarFormula" text="Borrar fórmula" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <Menu fx:id="menuSelecTV" mnemonicParsing="false" text="Seleccionar tabla de valores">
+                    <items>
+                        <MenuItem fx:id="miNuevaTV" mnemonicParsing="false" onAction="#handleNuevaTV" text="Nueva tabla de valores" />
+                    </items>
+                  </Menu>
+                  <MenuItem fx:id="miBorrarTV" mnemonicParsing="false" onAction="#borrarTV" text="Borrar tabla de valores" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Ayuda">
+          <items>
+                  <MenuItem fx:id="ayudaSintaxis" mnemonicParsing="false" onAction="#abrirSintaxis" text="Sintaxis" />
+                  <MenuItem fx:id="ayudaComoUsar" mnemonicParsing="false" onAction="#abrirComoUsar" text="Cómo usar" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <SplitPane fx:id="splitpane" dividerPositions="0.2505567928730512" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <items>
+        <AnchorPane maxWidth="300.0">
+          <children>
+                  <Label layoutX="10.0" layoutY="10.0" text="Función">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tfFuncion" layoutX="36.0" layoutY="40.0" onAction="#representar" promptText="Función" />
+                  <Label layoutX="13.0" layoutY="40.0" text="y =">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Button alignment="CENTER" layoutX="71.0" layoutY="75.0" mnemonicParsing="false" onAction="#representar" text="Representar" AnchorPane.leftAnchor="71.0" />
+                  <Button fx:id="btnBorrar" alignment="CENTER" layoutX="71.0" layoutY="110.0" mnemonicParsing="false" onAction="#borrar" text="Borrar" AnchorPane.leftAnchor="85.0" />
+                  <Label layoutX="10.0" layoutY="175.0" text="Tabla de valores">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tfTV" editable="false" layoutX="30.0" layoutY="205.0" promptText="Nombre de la tabla" />
+                  <LineChart fx:id="graficaValores" animated="false" layoutY="230.0" legendVisible="false" prefHeight="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </LineChart>
+                  <Button layoutX="100.0" layoutY="425.0" mnemonicParsing="false" onAction="#añadirValor" text="Añadir valor" />
+                  <TextField fx:id="tfValor" layoutX="60.0" layoutY="425.0" onAction="#añadirValor" prefWidth="30.0" />
+                  <Label layoutX="35.0" layoutY="425.0" text="x = ">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="100.0" layoutY="455.0" mnemonicParsing="false" onAction="#borrarValor" text="Borrar valor" />
+                  <TextArea fx:id="txtErrores" editable="false" prefHeight="70.0" prefWidth="200.0" promptText="Consola de errores" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+          </children>
+        </AnchorPane>
+            <VBox fx:id="Vista" prefHeight="200.0" prefWidth="100.0">
+               <children>
+              <ScrollPane fx:id="scrollpane" fitToHeight="true" fitToWidth="true" hvalue="0.5" prefHeight="-1.0" prefWidth="-1.0" vvalue="0.5">
+                     <content>
+                        <AnchorPane fx:id="graficaPane" maxHeight="4000.0" maxWidth="4000.0" onMouseMoved="#ratonMovido" prefHeight="4000.0" prefWidth="4000.0" translateX="2000.0" translateY="2000.0">
+                           <children>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7f7f7f" height="4000.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateX="-2000.0" translateY="-2000.0" width="4000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                              <Line fx:id="ejeY" endY="2000.0" startY="-2000.0" strokeWidth="4.0" />
+                              <Line fx:id="ejeX" endX="2000.0" startX="-2000.0" strokeWidth="4.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+              </ScrollPane>
+                  <Separator prefWidth="200.0" />
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                    <Label fx:id="labelRatonX" maxHeight="1.7976931348623157E308" maxWidth="-1.0" text="x = 0" textFill="#696969" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="0.0">
+                      <font>
+                        <Font size="11.0" fx:id="x3" />
+                      </font>
+                    </Label>
+                        <Label fx:id="labelRatonY" maxHeight="1.7976931348623157E308" maxWidth="-1.0" text="y = 0" textFill="#696969" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font size="11.0" fx:id="x31" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+      </items>
+    </SplitPane>
+  </children>
+</VBox>

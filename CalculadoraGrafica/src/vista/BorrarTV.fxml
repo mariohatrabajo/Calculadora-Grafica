@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane onKeyPressed="#handleEnter" prefHeight="259.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.controladorBorrarTV">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff9a9a" height="259.0" layoutX="-50.0" layoutY="-67.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Label layoutX="33.0" layoutY="38.0" prefHeight="27.0" prefWidth="85.0" text="Nombre:" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="60.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="87.0" prefHeight="27.0" prefWidth="85.0" text="Fórmula:" AnchorPane.bottomAnchor="145.0" AnchorPane.leftAnchor="30.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfNombre" editable="false" layoutX="105.0" layoutY="26.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="60.0" />
+      <TextField fx:id="tfFormula" editable="false" layoutX="121.0" layoutY="88.0" AnchorPane.bottomAnchor="146.0" AnchorPane.rightAnchor="30.0" />
+      <Button fx:id="btnOK" layoutX="134.0" layoutY="111.0" mnemonicParsing="false" onAction="#handleOK" text="OK" AnchorPane.bottomAnchor="15.0" />
+      <Label layoutX="29.0" layoutY="20.0" text="ID fórmula:" AnchorPane.leftAnchor="29.0" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cbID" layoutX="160.0" layoutY="131.0" onAction="#handleCBID" prefHeight="26.0" prefWidth="60.0" />
+      <Label layoutX="29.0" layoutY="130.0" text="ID tabla:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfID" editable="false" layoutX="168.0" layoutY="21.0" prefHeight="25.0" prefWidth="44.0" />
+      <Label layoutX="30.0" layoutY="157.0" text="Nombre:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfNombreTV" editable="false" layoutX="121.0" layoutY="158.0" />
+   </children>
+</AnchorPane>

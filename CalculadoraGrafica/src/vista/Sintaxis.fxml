@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+
+<ScrollPane fitToWidth="true" prefHeight="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <content>
+      <GridPane>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+         </rowConstraints>
+         <columnConstraints>
+            <ColumnConstraints maxWidth="176.79999542236328" minWidth="10.0" prefWidth="180.0" />
+            <ColumnConstraints maxWidth="156.79999999999998" minWidth="10.0" prefWidth="180.0" />
+         </columnConstraints>
+         <children>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="Suma" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="+" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="Resta" GridPane.rowIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="-" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="Multiplicación" GridPane.rowIndex="3">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="*" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="División" GridPane.rowIndex="4">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="/" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="Valor del eje x" GridPane.rowIndex="5">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="x" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="Paréntesis" GridPane.rowIndex="8">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="()" GridPane.columnIndex="1" GridPane.rowIndex="8">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="Valor absoluto" GridPane.rowIndex="11">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="abs" GridPane.columnIndex="1" GridPane.rowIndex="11">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="Seno" GridPane.rowIndex="12">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="sin" GridPane.columnIndex="1" GridPane.rowIndex="12">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="Coseno" GridPane.rowIndex="13">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="cos" GridPane.columnIndex="1" GridPane.rowIndex="13">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="Tangente" GridPane.rowIndex="14">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="tan" GridPane.columnIndex="1" GridPane.rowIndex="14">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="Exponencial" GridPane.rowIndex="6">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="^" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="Raiz cuadrada" GridPane.rowIndex="15">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="sqrt" GridPane.columnIndex="1" GridPane.rowIndex="15">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="π" GridPane.rowIndex="23">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="PI" GridPane.columnIndex="1" GridPane.rowIndex="23">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="Número de Euler" GridPane.rowIndex="24">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="E" GridPane.columnIndex="1" GridPane.rowIndex="24">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="Velocidad de la luz" GridPane.rowIndex="25">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="C" GridPane.columnIndex="1" GridPane.rowIndex="25">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="Constante gravitacional" GridPane.rowIndex="26">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="G" GridPane.columnIndex="1" GridPane.rowIndex="26">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="Logaritmo" GridPane.rowIndex="16">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="10 elevado a un numero" GridPane.rowIndex="18">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Separator prefWidth="200.0" GridPane.rowIndex="21" />
+            <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="21" />
+            <Separator prefWidth="200.0" GridPane.rowIndex="9" />
+            <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="Constantes" GridPane.rowIndex="22">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="Funciones" GridPane.rowIndex="10">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="Operadores">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="log" GridPane.columnIndex="1" GridPane.rowIndex="16">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="exp" GridPane.columnIndex="1" GridPane.rowIndex="18">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="Logaritmo en base 10" GridPane.rowIndex="17">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="logd" GridPane.columnIndex="1" GridPane.rowIndex="17">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="Módulo" GridPane.rowIndex="7">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="\%" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="Factorial (x!)" GridPane.rowIndex="19">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="fac" GridPane.columnIndex="1" GridPane.rowIndex="19">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="Número aleatorio" GridPane.rowIndex="20">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="160.0" text="rand" GridPane.columnIndex="1" GridPane.rowIndex="20">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+   </content>
+</ScrollPane>
